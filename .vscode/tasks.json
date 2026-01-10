@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "M4 C++ Run (Output in Terminal)",
+            "type": "shell",
+            "command": "/bin/zsh",
+            "args": [
+                "-c",
+                // Compile and pipe input directly to terminal output
+                "clang++ -std=c++17 -O0 \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\" -stdlib=libc++ && /usr/bin/time -p \"${fileDirname}/${fileBasenameNoExtension}\" < \"${workspaceFolder}/input.txt\""
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": "$gcc"
+        }
+    ]
+}

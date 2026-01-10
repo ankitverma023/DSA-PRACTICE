@@ -1,0 +1,23 @@
+# Ignore all compiled executables
+a.out
+*.out
+*.exe
+
+# Ignore ALL files without extension (Linux/Mac executables)
+*
+
+# BUT keep these files
+!*.cpp
+!*.md
+!.gitignore
+!*/
+
+# VS Code settings (local only)
+.vscode/
+
+# Input / Output files
+input.txt
+output.txt
+
+# Mac system files
+.DS_Store
